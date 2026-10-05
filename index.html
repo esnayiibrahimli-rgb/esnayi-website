@@ -630,6 +630,46 @@
   .mobile-panel.open{ transform:translateY(0); }
   .mobile-panel a{ font-family:var(--font-display); font-size:26px; }
   .mobile-panel .close-btn{ position:absolute; top:24px; right:28px; background:none; border:none; color:var(--text); font-size:26px; cursor:pointer; }
+
+  /* ---------- WEBINAR ---------- */
+  .webinar-block{ margin-top:88px; padding-top:72px; border-top:1px solid var(--line); scroll-margin-top:150px; }
+  .webinar-block > .section-head{ margin-bottom:44px; }
+  .webinar-block > .section-head p{ margin-top:6px; }
+  .service-card .btn-ghost + .btn-ghost{ display:table; margin-top:14px; color:var(--accent-deep); border-color:var(--accent-dim); }
+  .webinar-grid{ display:grid; grid-template-columns:minmax(0,420px) minmax(0,1fr); gap:64px; align-items:start; }
+  .webinar-poster{
+    display:block; border-radius:4px; overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 24px 50px -28px rgba(22,35,45,0.45);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .webinar-poster:hover, .webinar-poster:focus-visible{ transform:translateY(-3px); box-shadow:0 30px 56px -28px rgba(22,35,45,0.55); }
+  .webinar-poster img{ width:100%; height:auto; }
+  .webinar-info h3{ font-size:clamp(30px,3.8vw,44px); font-weight:400; line-height:1.18; margin-bottom:18px; }
+  .webinar-info > p{ color:var(--text-muted); font-size:16.5px; max-width:560px; }
+  .webinar-meta{ display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 34px; }
+  .webinar-meta li{
+    font-size:14px; font-weight:500; color:var(--text);
+    background:var(--bg-panel); border:1px solid var(--line);
+    border-radius:999px; padding:8px 16px;
+  }
+  .webinar-form{
+    background:#f6f8f9; border:1px solid var(--line); border-radius:4px;
+    padding:30px 30px 18px;
+  }
+  .webinar-form h4{ font-family:var(--font-display); font-weight:500; font-size:22px; margin-bottom:6px; }
+  .webinar-form .form-note{ margin:0 0 18px; font-size:13.5px; color:var(--text-muted); }
+  .webinar-form iframe{ width:100%; min-height:520px; border:0; display:block; }
+  .webinar-form .form-alt{ font-size:13px; color:var(--text-faint); margin-top:10px; }
+  .webinar-form .form-alt a{ color:var(--accent-deep); border-bottom:1px solid var(--accent-dim); }
+  @media (max-width: 900px){
+    .webinar-grid{ grid-template-columns:1fr; gap:40px; }
+    .webinar-poster{ max-width:440px; margin:0 auto; }
+  }
+  @media (max-width: 700px){
+    .webinar-block{ margin-top:56px; padding-top:48px; scroll-margin-top:170px; }
+    .webinar-form{ padding:22px 18px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -704,6 +744,7 @@
       <p class="lead">Göç ve expat deneyiminin beraberinde getirebildiği aidiyet, kimlik, yabancılık hissi, kültürel uyum ve yeniden bir yaşam kurma süreçleri de çalışmalarımda yer verdiğim temalar arasında.</p>
       <div class="hero-actions">
         <a href="#hakkimda" class="btn-primary">Hakkımda Daha Fazlası</a>
+        <a href="#webinar" class="btn-ghost">Ücretsiz Webinar · 18 Ekim: Göç ve Geride Bıraktıklarımız</a>
       </div>
     </div>
     <div class="hero-photo-frame">
@@ -944,8 +985,41 @@
         <h3>Kurumsal Danışmanlık & Workshop</h3>
         <p>Kurumlara özel ruh sağlığı farkındalığı, stres yönetimi ve iletişim odaklı danışmanlık ve atölye çalışmaları.</p>
         <a href="mailto:info@esnayiibrahimli.com" class="btn-ghost">Teklif iste</a>
+        <a href="#webinar" class="btn-ghost">Yaklaşan webinar: 18 Ekim</a>
       </div>
-    </section>
+    </div>
+
+    <!-- ===== Workshop & Webinar ===== -->
+    <div class="webinar-block" id="webinar">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-lg">Workshop &amp; Webinar</span>
+        <p>Herkese açık atölye ve webinar duyuruları burada yer alır.</p>
+      </div>
+      <div class="webinar-grid">
+        <a class="webinar-poster" href="assets/images/webinar-goc-ve-geride-biraktiklarimiz.jpg" target="_blank" rel="noopener" aria-label="Webinar afişini büyük boyutta aç">
+          <img src="assets/images/webinar-goc-ve-geride-biraktiklarimiz.jpg" width="1086" height="1448" loading="lazy" alt="Webinar afişi: Göç ve Geride Bıraktıklarımız — Klinik Psikolog Esnayi İbrahimli Şüküroğlu ve Klinik Psikolog Sinem Sarıca Katırcıo, 18 Ekim Pazar 19.00 (CEST), Zoom. Katılım herkese açıktır.">
+        </a>
+        <div class="webinar-info">
+          <span class="eyebrow">Ücretsiz Online Webinar</span>
+          <h3>Göç ve Geride Bıraktıklarımız</h3>
+          <p>Klinik Psikolog Esnayi İbrahimli Şüküroğlu ve Klinik Psikolog Sinem Sarıca Katırcıo ile göçün duygusal yükünü, geride bıraktıklarımızı ve yeni yerde tutunmayı konuşuyoruz.</p>
+          <ul class="webinar-meta">
+            <li>18 Ekim Pazar</li>
+            <li>19.00 Berlin · 20.00 Türkiye</li>
+            <li>Zoom</li>
+            <li>Ücretsiz · Herkese açık</li>
+          </ul>
+          <div class="webinar-form">
+            <h4>Başvuru Formu</h4>
+            <p class="form-note">Zoom bağlantısı, etkinlikten bir gün önce e-posta adresinize gönderilecektir.</p>
+            <iframe id="webinarForm" data-tally-src="https://tally.so/embed/EkyRVA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" title="Göç ve Geride Bıraktıklarımız — Webinar Başvuru Formu"></iframe>
+            <p class="form-alt">Form görünmüyorsa <a href="https://tally.so/r/EkyRVA" target="_blank" rel="noopener">buradan yeni sekmede açabilirsiniz</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ================= BLOG ================= -->
 <section class="page-section" id="blog">
@@ -1161,14 +1235,35 @@
       s.classList.toggle('active', isMatch);
       if(isMatch) matched = true;
     });
+    if(matched && id === 'hizmetler') loadWebinarForm();
     return matched;
   }
 
+  /* webinar form (Tally) — loaded only when the Webinar section is opened */
+  let webinarFormLoaded = false;
+  function loadWebinarForm(){
+    if(webinarFormLoaded) return;
+    webinarFormLoaded = true;
+    const direct = () => document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(f => { f.src = f.dataset.tallySrc; });
+    const s = document.createElement('script');
+    s.src = 'https://tally.so/widgets/embed.js';
+    s.onload = () => { if(window.Tally && Tally.loadEmbeds) Tally.loadEmbeds(); else direct(); };
+    s.onerror = direct;
+    document.body.appendChild(s);
+  }
+
+  // an id can be a whole section, or an anchor inside one (e.g. #webinar inside Hizmetler)
+  function openTarget(id){
+    const el = document.getElementById(id);
+    const sec = el && el.closest('.page-section');
+    if(!sec || !showSection(sec.id)) return false;
+    if(el === sec) window.scrollTo(0, 0);
+    else el.scrollIntoView({ block:'start' });
+    return true;
+  }
+
   function goToSection(id){
-    if(showSection(id)){
-      window.scrollTo(0, 0);
-      history.pushState(null, '', '#' + id);
-    }
+    if(openTarget(id)) history.pushState(null, '', '#' + id);
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1182,14 +1277,11 @@
   });
 
   window.addEventListener('popstate', () => {
-    const id = location.hash ? location.hash.slice(1) : 'ana-sayfa';
-    showSection(id);
-    window.scrollTo(0, 0);
+    if(!openTarget(location.hash.slice(1))) openTarget('ana-sayfa');
   });
 
   // initial section on load (respects a shared/bookmarked link with a hash)
-  const startId = (location.hash && document.getElementById(location.hash.slice(1))) ? location.hash.slice(1) : 'ana-sayfa';
-  showSection(startId);
+  if(!(location.hash && openTarget(location.hash.slice(1)))) showSection('ana-sayfa');
 
   /* ---------- contact form ---------- */
   const contactForm = document.getElementById('contactForm');

@@ -424,19 +424,29 @@
   .online-point p{ color:var(--text-muted); font-size:14.5px; }
 
   /* ---------- AREAS GRID ---------- */
-  .areas-grid{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;
+  .areas-groups{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;
   }
-  .area-item{
-    padding:22px 24px;
+  .area-group{
+    padding:34px 36px 30px;
     border:1px solid var(--line);
     border-radius:3px;
     background:var(--bg-panel-alt);
-    font-size:14.5px;
-    display:flex; align-items:center; gap:12px;
     transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
   }
-  .area-item:hover{ transform:translateY(-2px); border-color:var(--accent-dim); box-shadow:0 12px 26px -14px var(--accent-dim); }
+  .area-group:hover{ transform:translateY(-2px); border-color:var(--accent-dim); box-shadow:0 12px 26px -14px var(--accent-dim); }
+  .area-group h3{
+    font-size:22px; line-height:1.3; color:var(--text);
+    padding-bottom:16px; margin-bottom:14px;
+    border-bottom:1px solid var(--accent-dim);
+  }
+  .area-group ul{ list-style:none; margin:0; padding:0; }
+  .area-group li{
+    display:flex; align-items:flex-start; gap:12px;
+    padding:8px 0;
+    font-size:15.5px; line-height:1.5; color:var(--text-muted);
+  }
+  .area-group li .breath-dot{ margin-top:9px; }
 
   /* ---------- SERVICES ---------- */
   .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
@@ -594,7 +604,9 @@
     .about-grid, .online-grid, .contact-grid, .hero-inner{ grid-template-columns:1fr; }
     .hero-photo-frame{ max-width:280px; order:-1; }
     .about-portrait{ max-width:280px; order:-1; }
-    .areas-grid{ grid-template-columns:repeat(2,1fr); }
+    .areas-groups{ grid-template-columns:1fr; }
+    .area-group{ padding:26px 24px 22px; }
+    .area-group h3{ font-size:20px; }
     .services-grid{ grid-template-columns:1fr; }
     section{ padding:200px 0 60px; }
     .wrap{ padding:0 22px; }
@@ -613,7 +625,6 @@
     .hero{ padding-top:200px; }
   }
   @media (max-width: 520px){
-    .areas-grid{ grid-template-columns:1fr; }
     .hero-actions{ flex-direction:column; align-items:flex-start; }
   }
 
@@ -936,22 +947,41 @@
     <div class="section-head">
       <span class="eyebrow eyebrow-lg">Çalışma Alanlarım</span>
     </div>
-    <div class="areas-grid">
-      <div class="area-item"><span class="breath-dot"></span>Panik Bozukluk</div>
-      <div class="area-item"><span class="breath-dot"></span>Sosyal Kaygı Bozukluğu</div>
-      <div class="area-item"><span class="breath-dot"></span>Travma Sonrası Stres Bozukluğu (TSSB)</div>
-      <div class="area-item"><span class="breath-dot"></span>Duygudurum Bozuklukları (Depresyon ve Bipolar)</div>
-      <div class="area-item"><span class="breath-dot"></span>Obsesif Kompulsif Bozukluk</div>
-      <div class="area-item"><span class="breath-dot"></span>Kişilik Bozuklukları</div>
-      <div class="area-item"><span class="breath-dot"></span>Kayıp ve Yas Süreci</div>
-      <div class="area-item"><span class="breath-dot"></span>Tekrarlayan İlişki Döngüleri</div>
-      <div class="area-item"><span class="breath-dot"></span>Değersizlik, Suçluluk Duyguları</div>
-      <div class="area-item"><span class="breath-dot"></span>Günlük Yaşam Sorunları</div>
-      <div class="area-item"><span class="breath-dot"></span>Stres Yönetimi</div>
-      <div class="area-item"><span class="breath-dot"></span>Öfke Sorunları</div>
-      <div class="area-item"><span class="breath-dot"></span>Kimlik Kargaşası</div>
-      <div class="area-item"><span class="breath-dot"></span>Göç ve Uyum Süreci</div>
-      <div class="area-item"><span class="breath-dot"></span>DEHB (Dikkat Eksikliği Hiperaktivite Bozukluğu)</div>
+    <div class="areas-groups">
+      <div class="area-group">
+        <h3>Kaygı ve Zorlayıcı Belirtiler</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Panik ve yoğun kaygı</li>
+          <li><span class="breath-dot"></span>Sosyal kaygı</li>
+          <li><span class="breath-dot"></span>Obsesif kompulsif belirtiler</li>
+          <li><span class="breath-dot"></span>Travma sonrası yaşanan güçlükler</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>Duygudurum ve Duygusal Zorlanmalar</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Depresif dönemler ve duygudurum sorunları</li>
+          <li><span class="breath-dot"></span>Yoğun suçluluk ve değersizlik duyguları</li>
+          <li><span class="breath-dot"></span>Öfke ve duygu düzenleme güçlükleri</li>
+          <li><span class="breath-dot"></span>Stres ve yaşamın zorlayıcı dönemleri</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>İlişkiler ve Tekrarlayan Örüntüler</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Tekrarlayan ilişki döngüleri</li>
+          <li><span class="breath-dot"></span>Kişilerarası ilişkilerde yaşanan güçlükler</li>
+          <li><span class="breath-dot"></span>Kendilik algısı ve kişilik örüntüleri</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>Yaşam Geçişleri, Kayıp ve Kimlik</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Kayıp ve yas</li>
+          <li><span class="breath-dot"></span>Kimlik ve aidiyet sorunları</li>
+          <li><span class="breath-dot"></span>Göç, kültürel uyum ve yeniden yaşam kurma</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

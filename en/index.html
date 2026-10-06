@@ -425,19 +425,29 @@
   .online-point p{ color:var(--text-muted); font-size:14.5px; }
 
   /* ---------- AREAS GRID ---------- */
-  .areas-grid{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;
+  .areas-groups{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;
   }
-  .area-item{
-    padding:22px 24px;
+  .area-group{
+    padding:34px 36px 30px;
     border:1px solid var(--line);
     border-radius:3px;
     background:var(--bg-panel-alt);
-    font-size:14.5px;
-    display:flex; align-items:center; gap:12px;
     transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
   }
-  .area-item:hover{ transform:translateY(-2px); border-color:var(--accent-dim); box-shadow:0 12px 26px -14px var(--accent-dim); }
+  .area-group:hover{ transform:translateY(-2px); border-color:var(--accent-dim); box-shadow:0 12px 26px -14px var(--accent-dim); }
+  .area-group h3{
+    font-size:22px; line-height:1.3; color:var(--text);
+    padding-bottom:16px; margin-bottom:14px;
+    border-bottom:1px solid var(--accent-dim);
+  }
+  .area-group ul{ list-style:none; margin:0; padding:0; }
+  .area-group li{
+    display:flex; align-items:flex-start; gap:12px;
+    padding:8px 0;
+    font-size:15.5px; line-height:1.5; color:var(--text-muted);
+  }
+  .area-group li .breath-dot{ margin-top:9px; }
 
   /* ---------- SERVICES ---------- */
   .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
@@ -595,7 +605,9 @@
     .about-grid, .online-grid, .contact-grid, .hero-inner{ grid-template-columns:1fr; }
     .hero-photo-frame{ max-width:280px; order:-1; }
     .about-portrait{ max-width:280px; order:-1; }
-    .areas-grid{ grid-template-columns:repeat(2,1fr); }
+    .areas-groups{ grid-template-columns:1fr; }
+    .area-group{ padding:26px 24px 22px; }
+    .area-group h3{ font-size:20px; }
     .services-grid{ grid-template-columns:1fr; }
     section{ padding:200px 0 60px; }
     .wrap{ padding:0 22px; }
@@ -614,7 +626,6 @@
     .hero{ padding-top:200px; }
   }
   @media (max-width: 520px){
-    .areas-grid{ grid-template-columns:1fr; }
     .hero-actions{ flex-direction:column; align-items:flex-start; }
   }
 
@@ -894,22 +905,41 @@
     <div class="section-head">
       <span class="eyebrow eyebrow-lg">Areas of Practice</span>
     </div>
-    <div class="areas-grid">
-      <div class="area-item"><span class="breath-dot"></span>Panic Disorder</div>
-      <div class="area-item"><span class="breath-dot"></span>Social Anxiety Disorder</div>
-      <div class="area-item"><span class="breath-dot"></span>Post-Traumatic Stress Disorder (PTSD)</div>
-      <div class="area-item"><span class="breath-dot"></span>Mood Disorders (Depression & Bipolar Disorder)</div>
-      <div class="area-item"><span class="breath-dot"></span>Obsessive-Compulsive Disorder</div>
-      <div class="area-item"><span class="breath-dot"></span>Personality Disorders</div>
-      <div class="area-item"><span class="breath-dot"></span>Loss and Grief</div>
-      <div class="area-item"><span class="breath-dot"></span>Recurring Relationship Patterns</div>
-      <div class="area-item"><span class="breath-dot"></span>Feelings of Worthlessness and Guilt</div>
-      <div class="area-item"><span class="breath-dot"></span>Everyday Life Difficulties</div>
-      <div class="area-item"><span class="breath-dot"></span>Stress Management</div>
-      <div class="area-item"><span class="breath-dot"></span>Anger Issues</div>
-      <div class="area-item"><span class="breath-dot"></span>Identity Confusion</div>
-      <div class="area-item"><span class="breath-dot"></span>Migration and Adjustment</div>
-      <div class="area-item"><span class="breath-dot"></span>ADHD (Attention Deficit Hyperactivity Disorder)</div>
+    <div class="areas-groups">
+      <div class="area-group">
+        <h3>Anxiety and Distressing Symptoms</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Panic and intense anxiety</li>
+          <li><span class="breath-dot"></span>Social anxiety</li>
+          <li><span class="breath-dot"></span>Obsessive-compulsive symptoms</li>
+          <li><span class="breath-dot"></span>Difficulties following trauma</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>Mood and Emotional Difficulties</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Depressive periods and mood difficulties</li>
+          <li><span class="breath-dot"></span>Intense feelings of guilt and worthlessness</li>
+          <li><span class="breath-dot"></span>Anger and difficulties with emotion regulation</li>
+          <li><span class="breath-dot"></span>Stress and challenging periods of life</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>Relationships and Recurring Patterns</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Recurring relationship cycles</li>
+          <li><span class="breath-dot"></span>Difficulties in interpersonal relationships</li>
+          <li><span class="breath-dot"></span>Sense of self and personality patterns</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h3>Life Transitions, Loss and Identity</h3>
+        <ul>
+          <li><span class="breath-dot"></span>Loss and grief</li>
+          <li><span class="breath-dot"></span>Identity and belonging</li>
+          <li><span class="breath-dot"></span>Migration, cultural adjustment and rebuilding a life</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
